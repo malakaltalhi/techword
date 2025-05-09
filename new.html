@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>قاموس متعدد الصفحات</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 0;
+            direction: rtl;
+            background-color: #f9f9f9;
+            padding-bottom: 60px; /* يحجز مكان للفوتر */
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            font-size: 28px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 5px;
+            cursor: pointer;
+            text-decoration: underline;
+            color: #4CAF50;
+        }
+        section {
+            display: none;
+            padding: 20px;
+        }
+        section.active {
+            display: block;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            min-height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    قراءات باللغة الانجليزية في تقنيات التعليم 
+	</BR>
+أعدته : ملاك بنت عايش الطلحي
+</BR>
+	44680150
+	
+</header>
+
+<nav style="margin-top:10px;">
+    <a onclick="showPage(1)">1</a>
+    <a onclick="showPage(2)">2</a>
+    <a onclick="showPage(3)">3</a>
+    <a onclick="showPage(4)">4</a>
+    <a onclick="showPage(5)">5</a>
+    <a onclick="showPage(6)">6</a>
+    <a onclick="showPage(7)">7</a>
+    <a onclick="showPage(8)">8</a>
+    <a onclick="showPage(9)">9</a>
+    <a onclick="showPage(10)">10</a>
+	 <a onclick="showPage(11)">11</a>
+	  <a onclick="showPage(12)">12</a>
+</nav>
+
+<div id="pages">
+    <!-- صفحة 1 -->
+    <section id="page1" class="active">
+        <h2>مصطلحات البيئة التعليمية ( Learning Environment )</h2>
+        <div>
+            <!-- العمود الأول -->
+        <button onclick="showMeaning('صحة الطالب ورفاهيته', 'out1')">Student health and wellbeing</button>
+       
+        <button onclick="showMeaning('نظام المجتمع', 'out1')">Community</button>
+        <button onclick="showMeaning('الوضع الاجتماعي والاقتصادي', 'out1')">Socioeconomic</button>
+        <button onclick="showMeaning('التكامل بين المدرسة والمجتمع', 'out1')">School-community integration</button>
+        
+        <button onclick="showMeaning('حجم الفصل أصغر', 'out1')">Smaller class size</button>
+       
+    </div>
+   
+        <div id="out1" class="output">اضغط على زر لرؤية الترجمة</div>
+		
+		 <h2 style="text-align:center; margin-bottom:20px;">النظام الاجتماعي التقني (Sociotechnical System)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 النظام الاجتماعي التقني:</h3>
+            <p style="line-height:1.8;">
+                النظام الاجتماعي التقني: يشير إلى نهج مفاهيمي يؤكد على الحاجة إلى دمج السلوك الاجتماعي والهندسية الفنية والمتطلبات التنظيمية في تصميم الأنظمة المعقدة.
+            </p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Sociotechnical System:</h3>
+            <p style="line-height:1.8;">
+                Sociotechnical System: refers to a conceptual approach that emphasizes the need to integrate social behavioral technical engineering and organizational requirements in the design of complex systems.
+            </p>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- صفحة 2 -->
+    <section id="page2">
+        <h2>قراءات في التعلم الالكتروني ( E-Learning )</h2>
+        <div>
+              <!-- العمود الأول -->
+        <button onclick="showMeaning('إطار عمل تدريبي', 'out2')">Empirically-based framework</button>
+       
+        <button onclick="showMeaning('الثورة التعليمية', 'out2')">Educational revolution</button>
+        <button onclick="showMeaning('القرن 21', 'out2')">21st Century</button>
+        <button onclick="showMeaning('منهج التحول', 'out2')">Transforming approaches</button>
+        <button onclick="showMeaning('المشاركة الفعالة أو العملية', 'out2')">Active engagement</button>
+   
+        </div>
+        <div id="out2" class="output">اضغط على زر لرؤية الترجمة</div>
+		  <h2 style="text-align:center; margin-bottom:20px;">مجتمع الاستقصاء التربوي (Educational Community of Inquiry)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 مجتمع الاستقصاء التربوي:</h3>
+            <p style="line-height:1.8;">
+                مجتمع الاستقصاء التربوي هو مجموعة من الأفراد الذين يشاركون بشكل تعاوني في الخطاب النقدي الهادف والتفاعل لبناء المعنى الشخصي والتفاهم المتبادل.
+            </p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Educational Community of Inquiry:</h3>
+            <p style="line-height:1.8;">
+                An educational community of inquiry is a group of individuals who collaboratively engage in purposeful critical discourse and reflection to construct personal meaning and confirm mutual understanding.
+            </p>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- صفحة 3 -->
+    <section id="page3">
+        <h2> قراءات في التعلم الالكتروني المتزامن  ( Synchronous E-Learning )</h2>
+        <div>
+           <button onclick="showMeaning('عبر استبيان منظم', 'out3')">Via structured questionnaire</button>
+        <button onclick="showMeaning('بيئة تعلم اللغة الإلكترونية (ELLE)', 'out3')">E-Language Learning Environment (ELLE)</button>
+        <button onclick="showMeaning('مواجهة', 'out3')">Encounter</button>
+        <button onclick="showMeaning('أعلى مستويات التعلم / التفكير', 'out3')">Higher order learning/thinking</button>
+        </div>
+        <div id="out3" class="output">اضغط على زر لرؤية الترجمة</div>
+		 <h2 style="text-align:center; margin-bottom:20px;">نظام إدارة الدورة التدريبية (Course Management System CMS)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 نظام إدارة الدورة التدريبية CMS:</h3>
+            <p style="line-height:1.8;">
+                هو مصطلح قديم نسبيا واستخدامه أقل شيوعًا اليوم لأنه يشير إلى الإدارة الأساسية لمحتوى الدورة التدريبية، بينما يشير LMS إلى النظام الذي يدعم عملية التعلم.
+            </p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Course Management System CMS:</h3>
+            <p style="line-height:1.8;">
+                Course Management System (CMS) is comparatively an older term and its usage is less common today as it implies basic management of course content, while LMS indicates the system that supports the learning process.
+            </p>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- صفحة 4 -->
+    <section id="page4">
+        <h2>قراءات في التعلم الالكتروني غير المتزامن  ( Asynchronous E-Learning )</h2>
+        <div>
+        <button onclick="showMeaning('مختلط - هجين', 'out4')">Hybrid</button>
+        <button onclick="showMeaning('بيئة التعلم الافتراضية', 'out4')">Virtual learning environment</button>
+        <button onclick="showMeaning('ذاتي', 'out4')">Self-paced</button>
+        <button onclick="showMeaning('محاولة الأنشطة الإلكترونية', 'out4')">Attempt E-activities</button>
+        <button onclick="showMeaning('تفكير متشعب', 'out4')">Divergent thinking</button>
+        <button onclick="showMeaning('فراغ', 'out4')">Leisure</button>
+        </div>
+        <div id="out4" class="output">اضغط على زر لرؤية الترجمة</div>
+		<h2 style="text-align:center; margin-bottom:20px;">أنشطة التعلم عبر الإنترنت (Online Learning Activities)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 تشمل أنشطة التعلم عبر الإنترنت:</h3>
+            <p style="line-height:1.8;">
+                المناقشات المتزامنة وغير المتزامنة عبر الإنترنت، والتقييمات الذاتية عبر الإنترنت، والمدونات، ويكي، والرحلات الميدانية الافتراضية، والمختبرات الافتراضية، ودراسات الحالة، والمحاكاة، وحل المشكلات، ورسم خرائط المفاهيم، كائنات التعلم التفاعلي.
+            </p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Online learning activities:</h3>
+            <p style="line-height:1.8;">
+                Include: synchronous and asynchronous online discussions, online self-assessments, blogs, wikis, virtual field trips, virtual labs, case studies simulations, problem solving, concept mapping and interactive learning objects.
+            </p>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- صفحة 5 -->
+    <section id="page5">
+        <h2>قراءات في التعلم المدمج( Blended Learning )</h2>
+        <div>
+            <button onclick="showMeaning('قاعدة بيانات', 'out5')">Data Base</button>
+        
+        <button onclick="showMeaning('المصادر الرقمية', 'out5')">Digital resources</button>
+        
+        <button onclick="showMeaning('معلمي المستقبل', 'out5')">Future Teachers</button>
+        
+        <button onclick="showMeaning('التشريعات التربوية', 'out5')">Educational legislation</button>
+        <button onclick="showMeaning('التصور الذاتي', 'out5')">Self-perception</button>
+		
+
+        </div>
+        <div id="out5" class="output">اضغط على زر لرؤية الترجمة</div>
+		<h2 style="text-align:center; margin-bottom:20px;">التشريع التربوي (Educational Legislation)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 التشريع التربوي:</h3>
+            <p style="line-height:1.8;">
+                مصممة على إنشاء سيناريوهات مطلوبة للتحول التعليمي الذي يضع الطالب كموضوع نشط في عملية التدريس والتعلم.
+            </p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Educational Legislation:</h3>
+            <p style="line-height:1.8;">
+                Educational legislation is determined to create scenarios that are required for a didactic transformation that will place the student as an active subject in the teaching-learning process.
+            </p>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- صفحة 6 -->
+    <section id="page6">
+        <h2>قراءات في التعلم المتنقل  ( Mobile Learning )</h2>
+        <div>
+         
+        <button onclick="showMeaning('شاشات كبيرة', 'out6')">Large monitors</button>
+
+        <button onclick="showMeaning('الرسائل النصية القصيرة', 'out6')">SMS</button>
+        <button onclick="showMeaning('قلم رسم (قلم البريد)', 'out6')">Stylus pen</button>
+        
+       
+        
+        <button onclick="showMeaning('التعليم عن بعد', 'out6')">Distance learning</button>
+        <button onclick="showMeaning('الأجهزة المحمولة', 'out6')">Mobile devices</button>
+        
+        </div>
+        <div id="out6" class="output">اضغط على زر لرؤية الترجمة</div>
+		<h2 style="text-align:center; margin-bottom:20px;">التعلم الإلكتروني (E-Learning)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 التعلم الإلكتروني:</h3>
+            <p style="line-height:1.8;">
+                يُقصد بالتعلم الإلكتروني بشكل عام هو التعلم من خلال الأجهزة الإلكترونية مثل أجهزة الكمبيوتر المكتبية - المحمولة والهواتف الذكية وغيرها.
+            </p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 E-Learning:</h3>
+            <p style="line-height:1.8;">
+                E-learning is generally defined as learning through electronic devices such as desktop, laptop computer, smartphone etc.
+            </p>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- صفحة 7 -->
+    <section id="page7">
+        <h2>قراءات في التعلم القائم على المشاريع ( Project-Based Learning )</h2>
+        <div>
+            <button onclick="showMeaning('بناء الفرق', 'out7')">Teams building</button>
+        <button onclick="showMeaning('التخطيط', 'out7')">Planning</button>
+        <button onclick="showMeaning('قاعدة بيانات', 'out6')">Data Base</button>
+        <button onclick="showMeaning('البحث', 'out7')">Research</button>
+        <button onclick="showMeaning('التحليل', 'out7')">Analysis and Synthesis</button>
+        <button onclick="showMeaning('أخلاقيًا', 'out7')">Ethically</button>
+        </div>
+        <div id="out7" class="output">اضغط على زر لرؤية الترجمة</div>
+		
+		 <h2 style="text-align:center; margin-bottom:20px;">التعلم القائم على المشاريع (Project-Based Learning - PBL)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 التعلم القائم على المشاريع PBL:</h3>
+            <p style="line-height:1.8; margin-bottom:15px;">
+                PBL تساعد طلاب التعلم المدمج في الحصول على تعلم هام في:
+            </p>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">المهارات الخاصة</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">المهارات العامة والمنهجية</button>
+            </div>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Project-Based Learning (PBL):</h3>
+            <p style="line-height:1.8; margin-bottom:15px;">
+                The PBL has helped students of the Blended Learning mode to obtain a significant learning in:
+            </p>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">the Specific skills</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">the General and Systemic skills</button>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- صفحة 8 -->
+    <section id="page8">
+        <h2>قراءات في محو الأمية الرقمية ( Digital Literacy )</h2>
+        <div>
+           
+        <button onclick="showMeaning('الشبكات', 'out8')">Networking</button>
+        <button onclick="showMeaning('تفاوض', 'out8')">Negotiation</button>
+        <button onclick="showMeaning('الكفاءة الإعلامية', 'out8')">Media competence</button>
+		<button onclick="showMeaning('إنتاج', 'out8')">Production</button>
+        <button onclick="showMeaning('ترجمة', 'out8')">Interpretation</button>
+        </div>
+        <div id="out8" class="output">اضغط على زر لرؤية الترجمة</div>
+		<h2 style="text-align:center; margin-bottom:20px;">الثقافة الإعلامية (Media Literacy)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 الثقافة الإعلامية:</h3>
+            <p style="line-height:1.8;">
+                ينظر إلى الثقافة الإعلامية على أنها تتكون من سلسلة من كفاءات الاتصال، بما في ذلك القدرة على الوصول إلى المعلومات وتحليلها وتحليلها وتقيمها والاتصال بها في مجموعة متنوعة من الأشكال، بما في ذلك الرسائل المطبوعة وغير المطبوعة.
+            </p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Media Literacy:</h3>
+            <p style="line-height:1.8;">
+                Media literacy is seen to consist of a series of communication competencies, including the ability to ACCESS, ANALYZE, EVALUATE and COMMUNICATE information in a variety of forms, including print and nonprint messages.
+            </p>
+        </div>
+
+    </div>
+    </section>
+	 <!-- 9 -->
+    <section id="page9">
+        <h2>قراءات في محو الأمية البصرية ( Visual Media Literacy )</h2>
+        <div>
+           
+        <button onclick="showMeaning('الثقافة البصرية', 'out9')">Visual literacy</button>
+        <button onclick="showMeaning('الإدراك البصري', 'out9')">Visual perception</button>
+        <button onclick="showMeaning('الاتصال البصري', 'out9')">Visual communication</button>
+        <button onclick="showMeaning('التمثيل البصري', 'out9')">Visual representation</button>
+        <button onclick="showMeaning('التحليل البصري', 'out9')">Visual analysis</button>
+        </div>
+        <div id="out9" class="output">اضغط على زر لرؤية الترجمة</div>
+		<h2 style="text-align:center; margin-bottom:20px;">قراءات في محو الأمية البصرية (Visual Literacy)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 محو الأمية البصرية:</h3>
+            <p style="line-height:1.8;">
+                هو القدرة على تفسير الصور والرموز والرسومات البيانية والخرائط والمخططات، وفهم المعاني التي تنقلها الوسائط البصرية. يُعد محو الأمية البصرية مهارة أساسية في العصر الرقمي الحديث، حيث تلعب الصور دورًا مهمًا في التواصل ونقل المعرفة.
+            </p>
+            <p style="font-size:14px; color:#777; margin-top:15px;"><strong>المرجع:</strong> سالم، م. (2021). <em>محو الأمية البصرية وأهميتها في التعليم الرقمي</em>. مجلة التعليم والتعلم، 15(1)، 22-40.</p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Visual Literacy:</h3>
+            <p style="line-height:1.8;">
+                Visual literacy is the ability to interpret images, symbols, charts, maps, and diagrams, and understand the meanings conveyed by visual media. It is considered a fundamental skill in the modern digital era, where visuals play a crucial role in communication and knowledge dissemination.
+            </p>
+            <p style="font-size:14px; color:#777; margin-top:15px;"><strong>Reference:</strong> Salem, M. (2021). <em>Visual Literacy and Its Importance in Digital Education</em>. Journal of Teaching and Learning, 15(1), 22-40.</p>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- 10 -->
+    <section id="page10">
+        <h2>قراءات في الفصول الافتراضية  ( Virtual Classrooms )</h2>
+        <div>
+              <button onclick="showMeaning('التعليقات العفوية', 'out10')">Spontaneous comments</button>
+        <button onclick="showMeaning('السلوك الفوري', 'out10')">Spontaneous Behavior</button>
+        <button onclick="showMeaning('نظام عبر الإنترنت', 'out10')">Online system</button>
+        <button onclick="showMeaning('المدربون', 'out10')">Instructors</button>
+		<button onclick="showMeaning('التعلم المتزامن', 'out10')">Synchronous learning</button>
+        </div>
+        <div id="out10" class="output">اضغط على زر لرؤية الترجمة</div>
+		 <h2 style="text-align:center; margin-bottom:20px;">قراءات في الفصول الافتراضية (Virtual Classrooms)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 الفصول الافتراضية:</h3>
+            <p style="line-height:1.8;">
+                هي بيئات تعليمية إلكترونية تُستخدم لمحاكاة بيئات الفصول الدراسية التقليدية عبر الإنترنت، حيث تتيح التفاعل المباشر بين المعلم والطلاب باستخدام أدوات مثل الفيديو المباشر، الدردشة، مشاركة الملفات، والسبورات التفاعلية. تعتبر الفصول الافتراضية جزءًا أساسيًا من استراتيجيات التعلم الإلكتروني لدعم التعلم التزامني وغير التزامني.
+            </p>
+            <p style="font-size:14px; color:#777; margin-top:15px;"><strong>المرجع:</strong> العنزي، س. (2020). <em>الفصول الافتراضية ودورها في التعليم الإلكتروني</em>. مجلة التربية الحديثة، 12(3)، 45-60.</p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Virtual Classrooms:</h3>
+            <p style="line-height:1.8;">
+                Virtual classrooms are digital learning environments designed to simulate traditional classroom settings online, enabling direct interaction between instructors and students using tools such as live video, chat, file sharing, and interactive whiteboards. Virtual classrooms are a key component of e-learning strategies supporting both synchronous and asynchronous learning.
+            </p>
+            <p style="font-size:14px; color:#777; margin-top:15px;"><strong>Reference:</strong> Al-Anzi, S. (2020). <em>Virtual Classrooms and Their Role in E-Learning</em>. Journal of Modern Education, 12(3), 45-60.</p>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- 11 -->
+    <section id="page11">
+        <h2>قراءات في الصف المقلوب ( Flipped Classroom )</h2>
+        <div>
+            <button onclick="showMeaning('إعادة الاستخدام', 'out11')">Reusable</button>
+        <button onclick="showMeaning('ردود فعل فورية', 'out11')">Immediate Feedback</button>
+        <button onclick="showMeaning('التعلم التعاوني', 'out11')">Collaborative learning</button>
+        <button onclick="showMeaning('اكتساب المعرفة', 'out11')">Knowledge acquisition</button>
+        <button onclick="showMeaning('التعلم الذاتي عبر الإنترنت', 'out11')">Online self-paced learning</button>
+        <button onclick="showMeaning('التمكين', 'out11')">Empower</button>
+        </div>
+        <div id="out11" class="output">اضغط على زر لرؤية الترجمة</div>
+		   <h2 style="text-align:center; margin-bottom:20px;">فوائد الفصل المقلوب (Benefits of the Flipped Classroom)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 فوائد الفصل المقلوب:</h3>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">فعالة وقابلة لإعادة الاستخدام</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">التعلم المتحكم فيه من قبل الطالب</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">التعلم القائم على المشاركة</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">عرض المحتوى</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">التنفيذ الفعال من حيث التكلفة</button>
+            </div>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Benefits of the Flipped classroom:</h3>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">Efficient and Reusable</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">Student controlled learning</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">Engagement based learning</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">Content representation</button>
+                <button style="padding:10px; background:#00796b; color:white; border:none; border-radius:5px; cursor:default;">Cost-effective implementation</button>
+            </div>
+        </div>
+
+    </div>
+    </section>
+	
+	
+	<!-- 12 -->
+    <section id="page12">
+        <h2>قراءات في أدوات التدريس التقليدية ( Classic tools for teaching )</h2>
+        <div>
+             <button onclick="showMeaning('السبورة', 'out12')">Blackboard</button>
+        <button onclick="showMeaning('الطباشير', 'out12')">Chalk</button>
+        <button onclick="showMeaning('الكتب الدراسية', 'out12')">Textbooks</button>
+        <button onclick="showMeaning('جهاز العرض العلوي', 'out12')">Overhead projector</button>
+        <button onclick="showMeaning('البطاقات التعليمية', 'out12')">Flashcards</button>
+        </div>
+        <div id="out12" class="output">اضغط على زر لرؤية الترجمة</div>
+		<h2 style="text-align:center; margin-bottom:20px;">قراءات في أدوات التدريس التقليدية (Classic Tools for Teaching)</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; align-items:stretch; gap:20px;">
+
+        <!-- الصندوق العربي -->
+        <div style="flex:1; min-width:250px; background:#f0f0f0; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:right; direction:rtl;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📘 أدوات التدريس التقليدية:</h3>
+            <p style="line-height:1.8;">
+                تشير إلى الوسائل التعليمية التي كانت تُستخدم في الفصول الدراسية قبل ظهور التكنولوجيا الرقمية، مثل السبورة، الطباشير، الكتب المدرسية، والبطاقات التعليمية. تُعد هذه الأدوات أساسية في عملية التعليم والتعلم التقليدي، حيث تساهم في توصيل المعلومات بطريقة مباشرة وملموسة.
+            </p>
+            <p style="font-size:14px; color:#777; margin-top:15px;"><strong>المرجع:</strong> محمد، أ. (2019). <em>أثر استخدام الوسائل التعليمية التقليدية في تعزيز التعلم</em>. مجلة التربية الحديثة، 11(2)، 30-50.</p>
+        </div>
+
+        <!-- الصندوق الإنجليزي -->
+        <div style="flex:1; min-width:250px; background:#e8f5e9; border-radius:10px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:left; direction:ltr;">
+            <h3 style="color:#4CAF50; margin-bottom:10px;">📗 Classic Tools for Teaching:</h3>
+            <p style="line-height:1.8;">
+                Refers to the educational tools traditionally used in classrooms before the advent of digital technologies, such as the blackboard, chalk, textbooks, and flashcards. These tools are fundamental in conventional teaching and learning processes, providing direct and tangible means of delivering information.
+            </p>
+            <p style="font-size:14px; color:#777; margin-top:15px;"><strong>Reference:</strong> Mohammed, A. (2019). <em>The Impact of Using Traditional Educational Tools in Enhancing Learning</em>. Journal of Modern Education, 11(2), 30-50.</p>
+        </div>
+
+    </div>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2025 القاموس التفاعلي | جميع الحقوق محفوظة
+</footer>
+
+<script>
+    function showMeaning(text, outputId) {
+        document.getElementById(outputId).innerText = text;
+    }
+
+    function showPage(pageNumber) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(sec => sec.classList.remove('active'));
+        document.getElementById('page' + pageNumber).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
